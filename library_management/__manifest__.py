@@ -23,6 +23,6 @@
     ],
 
     'demo': [
-
+        'demo/library_demo.xml',
     ],
 }
