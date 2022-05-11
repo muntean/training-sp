@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <record model="library.book" id="book_01">
+        <record model="library.book" id="book_mystery">
             <field name="name">The Da Vinci Code</field>
             <field name="author">Dan Brown</field>
             <field name="genre">mystery</field>
+            <field name="edition_year">2016</field>
         </record>
 
-        <record model="library.book" id="book_02">
+        <record model="library.book" id="book_romance">
             <field name="name">It Ends With Us</field>
             <field name="author">Colleen Hoover</field>
             <field name="genre">romance</field>
+            <field name="edition_year">2018</field>
         </record>
 
-        <record model="library.book" id="book_03">
+        <record model="library.book" id="book_historical">
             <field name="name">Egypt</field>
             <field name="author">Christina Riggs</field>
             <field name="genre">historical</field>
+            <field name="edition_year">2017</field>
         </record>
 
-        <record model="library.book" id="book_04">
+        <record model="library.book" id="book_scifi">
             <field name="name">Book of Night</field>
             <field name="author">Holly Black</field>
             <field name="genre">sci_fi</field>
+            <field name="edition_year">2019</field>
         </record>
 
-        <record model="library.book" id="book_05">
+        <record model="library.book" id="book_romance2">
             <field name="name">Reminders of Him</field>
             <field name="author">Coleen Hoover</field>
             <field name="genre">romance</field>
+            <field name="edition_year">2020</field>
         </record>
     </data>
 </odoo>
