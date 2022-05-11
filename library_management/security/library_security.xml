@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_librarians" model="res.groups">
+        <field name="name">Library / Librarian</field>
+    </record>
+
+    <record id="books_on_stock_modify" model="ir.rule">
+        <field name="name">Only Books that are in stock can be modified</field>
+        <field name="perm_read" eval="0"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">[('in_stock','=',True)]</field>
+        <field name="model_id" ref="model_library_book"/>
+    </record>
+</odoo>

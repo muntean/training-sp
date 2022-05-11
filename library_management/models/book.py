@@ -19,3 +19,4 @@ class Book(models.Model):
                                         ('historical', 'Historical'),
                                         ('romance', 'Romance'),
                                         ('sci_fi', 'Science Fiction')])
+    in_stock = fields.Boolean()
