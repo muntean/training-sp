@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="book_view_form">
+            <field name="name">library.book.view.form</field>
+            <field name="model">library.book</field>
+            <field name="arch" type="xml">
+                <form string="Book Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <field name="author"/>
+                                <field name="genre"/>
+                                <field name="in_stock"/>
+                            </group>
+                            <group>
+                                <field name="editor"/>
+                                <field name="edition_year"/>
+                                <field name="isbn"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="book_view_list">
+            <field name="name">library.book.view.list</field>
+            <field name="model">library.book</field>
+            <field name="arch" type="xml">
+                <tree string="Book List">
+                    <field name="name"/>
+                    <field name="author"/>
+                    <field name="isbn"/>
+                    <field name="genre"/>
+                    <field name="in_stock"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="book_view_search">
+            <field name="name">library.book.view.search</field>
+            <field name="model">library.book</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="author"/>
+                    <field name="isbn"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

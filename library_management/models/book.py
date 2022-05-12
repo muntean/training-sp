@@ -20,3 +20,4 @@ class Book(models.Model):
                                         ('romance', 'Romance'),
                                         ('sci_fi', 'Science Fiction')])
     in_stock = fields.Boolean(default=True)
+    notes = fields.Text()
