@@ -23,6 +23,10 @@ class Book(models.Model):
     in_stock = fields.Boolean(default=True)
     notes = fields.Text()
     
+    rental_ids = fields.One2many(comodel_name='library.rental',
+                                 inverse_name='book_id',
+                                 string='Rentals')
+    
     @api.onchange('isbn')
     def _onchange_isbn(self):
         if len(self.isbn) != 13:

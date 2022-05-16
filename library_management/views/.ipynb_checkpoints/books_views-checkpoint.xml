@@ -24,6 +24,9 @@
                             <page string="Note">
                                 <field name="notes"/>
                             </page>
+                            <page string="Rentals">
+                                <field name="rental_ids"/>
+                            </page>
                         </notebook>
                     </sheet>
                 </form>

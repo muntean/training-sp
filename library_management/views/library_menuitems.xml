@@ -11,6 +11,17 @@
                 </p>
             </field>
         </record>
+        
+        <record model="ir.actions.act_window" id="rentals_list_action">
+            <field name="name">Rentals</field>
+            <field name="res_model">library.rental</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create the first rental
+                </p>
+            </field>
+        </record>
 
         <menuitem name="Stefana's Library" id="menu_library" sequence="1"
                   web_icon="library_management,static/description/library_icon.png"/>
@@ -18,5 +29,7 @@
         <menuitem id="menu_library_sub" name="Library" parent="menu_library" sequence="2"/>
 
         <menuitem id="menu_library_books" name="Books" parent="menu_library_sub" sequence="3" action="books_list_action"/>
+        
+        <menuitem id="menu_library_rentals" name="Rentals" parent="menu_library_sub" sequence="4" action="rentals_list_action"/>
     </data>
 </odoo>
