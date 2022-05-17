@@ -16,7 +16,7 @@
     'category': 'Management',
     'version': '1.0.0',
 
-    'depends': ['base'],
+    'depends': ['base', 'web_map'],
 
     'data': [
         'security/library_security.xml',

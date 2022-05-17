@@ -30,5 +30,16 @@
                 </tree>
             </field>
         </record>
+        
+        <record model="ir.ui.view" id="rental_view_map">
+            <field name="name">library.rental.view.map</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <map res_partner="customer_id" hide_name="True" hide_address="True">
+                    <field name="customer_id" string="Customer:"/>
+                    <field name="book_id" string="Book:"/>
+                </map>
+            </field>
+        </record>
     </data>
 </odoo>
