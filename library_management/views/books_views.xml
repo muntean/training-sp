@@ -24,8 +24,12 @@
                             <page string="Note">
                                 <field name="notes"/>
                             </page>
-                            <page string="Rentals">
-                                <field name="rental_ids"/>
+                            <page string="Copies">
+                                <field name="book_copy_ids">
+                                    <tree>
+                                        <field name="reference"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

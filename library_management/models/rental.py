@@ -8,9 +8,9 @@ class Rental(models.Model):
     _description = 'Book Rental History'
     
     customer_id = fields.Many2one(comodel_name='res.partner', string='Customer')
-    
-    book_id = fields.Many2one(comodel_name='library.book',
+
+    book_id = fields.Many2one(comodel_name='library.book.copy',
                               string='Book',
                               ondelete='cascade',
                               required=True)
-    name = fields.Char(comodel_name='library.book', related='book_id.name', string='Title')
+    #name = fields.Char(comodel_name='library.book', related='book_id.name', string='Title')

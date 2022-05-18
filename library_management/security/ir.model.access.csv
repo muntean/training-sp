@@ -3,3 +3,6 @@ library_librarian,library librarian,model_library_book,group_librarians,1,1,1,1
 library_customer,library customer,model_library_book,,1,0,0,0
 library_librarian_rental,library librarian rental,model_library_rental,group_librarians,1,1,1,1
 library_customer_rental,library customer rental,model_library_rental,,1,0,0,0
+library_book_copy,library book copy,model_library_book_copy,group_librarians,1,1,1,1
+library_customer_book_copy,library customer book copy,model_library_book_copy,,1,0,0,0
+library_customer_rental_wizard,library customer rental wizard,model_library_customer_rental_wizard,group_librarians,1,1,1,1

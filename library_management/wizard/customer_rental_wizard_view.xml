@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="library_customer_rental_wizard_form_view">
+            <field name="name">library.customer.rental.wizard.form</field>
+            <field name="model">library.customer.rental.wizard</field>
+            <field name="arch" type="xml">
+                <form string="See the Books rented by the Customer">
+                    <group>
+                        <field name="customer_id"/>
+                        <field name="book_ids" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button name="get_customer_rentals" type="object"
+                                string="Show Rented Books" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="launch_customer_rental_wizard"
+                    name="Show the rented books"
+                    binding_model="library.book"
+                    res_model="library.customer.rental.wizard"
+                    view_mode="form"
+                    target="new"/>
+    </data>
+</odoo>

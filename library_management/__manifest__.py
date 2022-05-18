@@ -23,7 +23,9 @@
         'security/ir.model.access.csv',
         'views/library_menuitems.xml',
         'views/books_views.xml',
+        'views/book_copy_views.xml',
         'views/rentals_views.xml',
+        'wizard/customer_rental_wizard_view.xml',
     ],
 
     'demo': [

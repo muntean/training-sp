@@ -23,9 +23,7 @@ class Book(models.Model):
     in_stock = fields.Boolean(default=True)
     notes = fields.Text()
     
-    rental_ids = fields.One2many(comodel_name='library.rental',
-                                 inverse_name='book_id',
-                                 string='Rentals')
+    book_copy_ids = fields.One2many('library.book.copy', 'book_id', string='Book Copies')
     
     @api.onchange('isbn')
     def _onchange_isbn(self):
