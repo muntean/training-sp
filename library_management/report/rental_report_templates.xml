@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report
+        id="report_rental"
+        model="library.rental"
+        string="Rental Report"
+        name="library_management.report_rental_document"
+        file="library_management.report_rental"
+        report_type="qweb-html"/>
+
+    <template id="report_rental_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Rental Report</h2>
+                        <p>Rental date:
+                            <span t-field="doc.create_date" t-field-options='{"format": "long"}'/>
+                        </p>
+                        <t t-set="customer" t-value="doc.customer_id"/>
+                        <t t-set="book" t-value="doc.book_id"/>
+                        <div class="row-auto row-cols-2">
+                            <div class="col-auto mw-100 mb-2" id="customer_info">
+                                <div class="row mt32 mb32">
+                                    <strong>Customer Info:</strong>
+                                </div>
+                                <div class="row mt32 mb32">
+                                    <t t-if="customer.name">Name:
+                                        <span t-field="customer.name"/>
+                                    </t>
+                                </div>
+                                <div class="row mt32 mb32">
+                                    <t t-if="customer.phone">Phone:
+                                        <span t-field="customer.phone"/>
+                                    </t>
+                                </div>
+                                <div class="row mt32 mb32">
+                                    <t t-if="customer.email">Email:
+                                        <span t-field="customer.email"/>
+                                    </t>
+                                </div>
+                            </div>
+
+                            <div class="col-auto mw-100 mb-2" id="book_info">
+                                <div class="row mt32 mb32">
+                                    <strong>Book Info:</strong>
+                                </div>
+                                <div class="row mt32 mb32">
+                                    <t t-if="book.name">Title:
+                                        <span t-field="book.name"/>
+                                    </t>
+                                </div>
+                                <div class="row mt32 mb32">
+                                    <t t-if="book.author">Author:
+                                        <span t-field="book.author"/>
+                                    </t>
+                                </div>
+                                <div class="row mt32 mb32">
+                                    <t t-if="book.isbn">ISBN:
+                                        <span t-field="book.isbn"/>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

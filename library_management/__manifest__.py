@@ -16,7 +16,7 @@
     'category': 'Management',
     'version': '1.0.0',
 
-    'depends': ['base', 'web_map'],
+    'depends': ['base', 'web_map', 'website'],
 
     'data': [
         'security/library_security.xml',
@@ -26,6 +26,8 @@
         'views/book_copy_views.xml',
         'views/rentals_views.xml',
         'wizard/customer_rental_wizard_view.xml',
+        'report/rental_report_templates.xml',
+        'views/library_web_templates.xml',
     ],
 
     'demo': [
